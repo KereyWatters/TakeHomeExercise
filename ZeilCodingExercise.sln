@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeilCodingExercise", "ZeilCodingExercise\ZeilCodingExercise.csproj", "{8399A4D3-B43D-4EA8-9A18-B721F5EEB0A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CeilCodingExercise.Tests", "CeilCodingExercise.Tests\CeilCodingExercise.Tests.csproj", "{9979B881-5571-4613-989F-119C38E35CEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeilCodingExercise.Tests", "ZeilCodingExercise.Tests\ZeilCodingExercise.Tests.csproj", "{9979B881-5571-4613-989F-119C38E35CEE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{521BF07F-DFC9-4081-B5AF-FBBA51C5444E}"
 EndProject

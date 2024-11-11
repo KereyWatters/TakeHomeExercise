@@ -1,7 +1,7 @@
 using CreditCardValidator;
 using ZeilCodingExercise.Services;
 
-namespace CeilCodingExercise.Tests.Services;
+namespace ZeilCodingExercise.Tests.Services;
 
 public class LuhnValidationServiceTests
 {
