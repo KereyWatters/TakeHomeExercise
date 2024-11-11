@@ -3,33 +3,30 @@ using ZeilCodingExercise.Services;
 
 namespace ZeilCodingExercise.Tests.Services;
 
-public class LuhnValidationServiceTests
-{
-    LuhnValidationService _service;
-    public LuhnValidationServiceTests()
-	{
-        _service = new LuhnValidationService();
+public class LuhnValidationServiceTests {
+	LuhnValidationService _service;
+	public LuhnValidationServiceTests() {
+		_service = new LuhnValidationService();
 	}
 
-    // Verify malformed strings don't pass
-    [Theory]
-    [InlineData("asd12asdas223456")]
-    [InlineData("1234567890123asd")]
-    [InlineData("asd78901d2345678")]
+	// Verify malformed strings don't pass
+	[Theory]
+	[InlineData("asd12asdas223456")]
+	[InlineData("1234567890123asd")]
+	[InlineData("asd78901d2345678")]
 	[InlineData("123456789=01256789")]
-    public void MalformedCardNumbersShouldFail(string input)
-	{
+	public void MalformedCardNumbersShouldFail(string input) {
 		var result = _service.ValidateCreditCardLuhn(input);
 		Assert.False(result.IsValid);
 		Assert.Equal(LuhnValidationService.LuhnValidationErrorType.MalformedNumber, result.Error);
 	}
 
-    [Theory]
+	[Theory]
 	[InlineData("")]
 	[InlineData("123456789")]
 	[InlineData("12345678901234567890")]
-    public void CardNumbersWithUnexpectedLengthsShouldFail(string input) {
-        var result = _service.ValidateCreditCardLuhn(input);
+	public void CardNumbersWithUnexpectedLengthsShouldFail(string input) {
+		var result = _service.ValidateCreditCardLuhn(input);
 		Assert.False(result.IsValid);
 		Assert.Equal(LuhnValidationService.LuhnValidationErrorType.UnexpectedLength, result.Error);
 	}
